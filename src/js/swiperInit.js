@@ -39,4 +39,12 @@ export function swiperInit() {
         },
       },
   });
+  var leadSwiper = new Swiper(".leadSwiper", {
+    slidesPerView: "auto",
+    spaceBetween: 18,
+    navigation: {
+      nextEl: ".about-lead__next",
+      prevEl: ".about-lead__prev",
+    },
+  });
 }
