@@ -2,6 +2,7 @@ import { menuSetup } from './menuSetup.js';
 import { swiperInit } from './swiperInit.js';
 import { animateGsap } from './animateGsap.js';
 import { filterMember } from './filter.js';
+import { tabsInit } from './tabs.js';
 
 let scroll = window.scrollY;
 let header = document.querySelector('.header');
@@ -16,6 +17,11 @@ window.addEventListener("load", function () {
   swiperInit();
   animateGsap();
   filterMember();
+  tabsInit();
+
+  Fancybox.bind("[data-fancybox]", {
+    // Your custom options
+  });
 
   window.addEventListener("scroll", () => {
     if(header) {

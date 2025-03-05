@@ -5,9 +5,120 @@
     @@include('html/header.html')
 
     <main>
-      <section class="media section-first section-pad">
+      <section class="media-hero section-first section-pad section-hidden">
         <div class="container">
-          
+          <div class="media-hero__container">
+            <h1 class="media-hero__title text-up up">Медиа</h1>
+          </div>
+        </div>
+      </section>
+      <section class="gallery-photo gallery section-light section-pad section-hidden">
+        <div class="container">
+          <div class="gallery-photo__container gallery__container">
+            <h2 class="gallery-photo__title gallery__title text-up bl-indent up">Фотогалерея</h2>
+            <div class="gallery-photo__slider gallery__slider">
+              <!-- мин 6 слайдов -->
+              <div class="swiper photoSwiper">
+                <div class="swiper-wrapper">
+                  <a class="gallery__slide swiper-slide" href="@img/gallery-1.png" data-fancybox="gallery-photo">
+                    <img src="@img/gallery-1.png" />
+                  </a>
+                  <a class="gallery__slide swiper-slide" href="@img/gallery-2.png" data-fancybox="gallery-photo">
+                    <img src="@img/gallery-2.png" />
+                  </a>
+                  <a class="gallery__slide swiper-slide" href="@img/gallery-3.png" data-fancybox="gallery-photo">
+                    <img src="@img/gallery-3.png" />
+                  </a>
+                  <a class="gallery__slide swiper-slide" href="@img/gallery-4.png" data-fancybox="gallery-photo">
+                    <img src="@img/gallery-4.png" />
+                  </a>
+                  <a class="gallery__slide swiper-slide" href="@img/gallery-5.png" data-fancybox="gallery-photo">
+                    <img src="@img/gallery-5.png" />
+                  </a>
+                  <a class="gallery__slide swiper-slide" href="@img/gallery-4.png" data-fancybox="gallery-photo">
+                    <img src="@img/gallery-4.png" />
+                  </a>
+                </div>
+              </div>
+              <div class="gallery__navigate">
+                <div class="gallery__arrow photo-prev">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9.72579 17.8195C9.94376 18.0602 10.3065 18.0602 10.5321 17.8195C10.7501 17.587 10.7501 17.2001 10.5321 16.9681L6.44347 12.607L19.9355 12.607C20.25 12.6064 20.5 12.3398 20.5 12.0043C20.5 11.6689 20.25 11.3936 19.9355 11.3936L6.44347 11.3936L10.5321 7.04056C10.7501 6.79993 10.7501 6.41243 10.5321 6.18047C10.3065 5.93984 9.94325 5.93984 9.72579 6.18047L4.6692 11.574C4.4436 11.8065 4.4436 12.1935 4.6692 12.4254L9.72579 17.8195Z" fill="#0C0C0C"/>
+                  </svg>                    
+                </div>
+                <div class="gallery__pagination photo-pagination"></div>
+                <div class="gallery__arrow photo-next">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M14.2742 6.18047C14.0562 5.93984 13.6935 5.93984 13.4679 6.18047C13.2499 6.41297 13.2499 6.79993 13.4679 7.03189L17.5565 11.393L4.0645 11.393C3.74998 11.3936 3.5 11.6602 3.5 11.9957C3.5 12.3311 3.74998 12.6064 4.0645 12.6064L17.5565 12.6064L13.4679 16.9594C13.2499 17.2001 13.2499 17.5876 13.4679 17.8195C13.6935 18.0602 14.0567 18.0602 14.2742 17.8195L19.3308 12.426C19.5564 12.1935 19.5564 11.8065 19.3308 11.5746L14.2742 6.18047Z" fill="#0C0C0C"/>
+                  </svg>                    
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="gallery-video gallery section-pad section-hidden">
+        <div class="container">
+          <div class="gallery-video__container gallery__container">
+            <h2 class="gallery-video__title gallery__title text-up bl-indent up">Видеогалерея</h2>
+            <div class="gallery-video__slider gallery__slider">
+              <!-- мин 6 слайдов -->
+              <div class="swiper videoSwiper">
+                <div class="swiper-wrapper">
+                  <a class="gallery__slide swiper-slide" href="https://youtu.be/krDWc30PAGg?si=EalsCKkGxZlHsa7h" data-fancybox="gallery-video">
+                    <img src="@img/gallery-1.png" />
+                  </a>
+                  <a class="gallery__slide swiper-slide" href="https://youtu.be/krDWc30PAGg?si=EalsCKkGxZlHsa7h" data-fancybox="gallery-video">
+                    <img src="@img/gallery-2.png" />
+                  </a>
+                  <a class="gallery__slide swiper-slide" href="https://youtu.be/krDWc30PAGg?si=EalsCKkGxZlHsa7h" data-fancybox="gallery-video">
+                    <img src="@img/gallery-3.png" />
+                  </a>
+                  <a class="gallery__slide swiper-slide" href="https://youtu.be/krDWc30PAGg?si=EalsCKkGxZlHsa7h" data-fancybox="gallery-video">
+                    <img src="@img/gallery-4.png" />
+                  </a>
+                  <a class="gallery__slide swiper-slide" href="https://youtu.be/krDWc30PAGg?si=EalsCKkGxZlHsa7h" data-fancybox="gallery-video">
+                    <img src="@img/gallery-5.png" />
+                  </a>
+                  <a class="gallery__slide swiper-slide" href="https://youtu.be/krDWc30PAGg?si=EalsCKkGxZlHsa7h" data-fancybox="gallery-video">
+                    <img src="@img/gallery-4.png" />
+                  </a>
+                </div>
+              </div>
+              <div class="gallery__navigate">
+                <div class="gallery__arrow video-prev">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9.72579 17.8195C9.94376 18.0602 10.3065 18.0602 10.5321 17.8195C10.7501 17.587 10.7501 17.2001 10.5321 16.9681L6.44347 12.607L19.9355 12.607C20.25 12.6064 20.5 12.3398 20.5 12.0043C20.5 11.6689 20.25 11.3936 19.9355 11.3936L6.44347 11.3936L10.5321 7.04056C10.7501 6.79993 10.7501 6.41243 10.5321 6.18047C10.3065 5.93984 9.94325 5.93984 9.72579 6.18047L4.6692 11.574C4.4436 11.8065 4.4436 12.1935 4.6692 12.4254L9.72579 17.8195Z" fill="white"/>
+                  </svg>                    
+                </div>
+                <div class="gallery__pagination video-pagination"></div>
+                <div class="gallery__arrow video-next">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M14.2742 6.18047C14.0562 5.93984 13.6935 5.93984 13.4679 6.18047C13.2499 6.41297 13.2499 6.79993 13.4679 7.03189L17.5565 11.393L4.0645 11.393C3.74998 11.3936 3.5 11.6602 3.5 11.9957C3.5 12.3311 3.74998 12.6064 4.0645 12.6064L17.5565 12.6064L13.4679 16.9594C13.2499 17.2001 13.2499 17.5876 13.4679 17.8195C13.6935 18.0602 14.0567 18.0602 14.2742 17.8195L19.3308 12.426C19.5564 12.1935 19.5564 11.8065 19.3308 11.5746L14.2742 6.18047Z" fill="white"/>
+                  </svg>                    
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="broadcast section-pad-bottom section-hidden">
+        <div class="container">
+          <div class="broadcast__container">
+            <h2 class="broadcast__title text-up bl-indent">Трансляция боев</h2>
+            <div class="broadcast__tabs">
+              <ul class="broadcast__captions tabs text-up bl-indent">
+                <li class="tab active">HFC</li>
+                <li class="tab">HFC MMA</li>
+                <li class="tab">Hardcore boxing</li>
+              </ul>
+              <div class="broadcast__contents tab__contents">
+                <a class="broadcast__content tab__content active" href="" target="_blank"><img src="@img/video.png" alt=""></a>
+                <a class="broadcast__content tab__content" href="" target="_blank"><img src="@img/news-1.png" alt=""></a>
+                <a class="broadcast__content tab__content" href="" target="_blank"><img src="@img/video.png" alt=""></a>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </main>

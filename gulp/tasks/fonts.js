@@ -21,7 +21,7 @@ export const ttfToWoff = () => {
         .pipe(app.plugins.plumber(
             app.plugins.notify.onError({
                 title: "FONTS",
-                message: "Error: <%= error.message =>"
+                message: "Error: <%= error.message %>"
             })
         ))
         .pipe(fonter({
