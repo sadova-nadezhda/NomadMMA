@@ -64,8 +64,8 @@ export function swiperInit() {
   var historySwiper2 = new Swiper(".historySwiper2", {
     spaceBetween: 8,
     navigation: {
-      nextEl: ".history-button-next",
-      prevEl: ".history-button-prev",
+      nextEl: ".history-next",
+      prevEl: ".history-prev",
     },
     pagination: {
       el: ".history-pagination",
