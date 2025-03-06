@@ -67,10 +67,12 @@ body {
 
 body {
   &::-webkit-scrollbar {
-    width: 6px;
+    width: 4px;
+    border-radius: 20px;
     background-color: var(--bg-main, $bg-main);
   }
   &::-webkit-scrollbar-thumb {
+    border-radius: 20px;
     background-color: var(--bg-light, $bg-light);
   }
 }
