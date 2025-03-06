@@ -1,7 +1,7 @@
 import { menuSetup } from './menuSetup.js';
 import { swiperInit } from './swiperInit.js';
 import { animateGsap } from './animateGsap.js';
-import { filterMember } from './filter.js';
+// import { filterMember } from './filter.js';
 import { tabsInit } from './tabs.js';
 import { ShowHidden } from './show.js';
 
@@ -17,7 +17,6 @@ window.addEventListener("load", function () {
   menuSetup();
   swiperInit();
   animateGsap();
-  filterMember();
   tabsInit();
   ShowHidden();
 
