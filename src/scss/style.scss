@@ -1239,6 +1239,9 @@
   &-past {
     &__button {
       cursor: pointer;
+      &.btn-hide {
+        display: none;
+      }
     }
   }
   &__table {
@@ -1280,6 +1283,11 @@
       transition: color 0.3s ease-out;
       &:hover {
         color: var(--main, $main);
+      }
+    }
+    tr {
+      &.hidden {
+        display: none;
       }
     }
   }
@@ -1675,6 +1683,9 @@
   &:hover {
     cursor: pointer;
     color: var(--main, $main);
+    @media (max-width: 767px) {
+      color: var(--white, $white);
+    }
   }
   @media (max-width: 767px) {
     padding: 14px 20px;
@@ -1740,6 +1751,11 @@
 }
 
 .agency {
+  &__title {
+    @media (max-width: 767px) {
+      font-size: 20px;
+    }
+  }
   &__cards {
     display: flex;
     flex-wrap: wrap;
@@ -1772,6 +1788,11 @@
     font-size: 14px;
   }
   &-page {
+    &__title {
+      @media (max-width: 767px) {
+        font-size: 20px;
+      }
+    }
     &__cards {
       display: grid;
       grid-template-columns: repeat(5, 1fr);
@@ -1864,6 +1885,9 @@
         &:hover {
           cursor: pointer;
           color: var(--main, $main);
+          @media (max-width: 767px) {
+            color: var(--white, $white);
+          }
         }
       }
     }
@@ -1938,6 +1962,12 @@
     }
     &-hide {
       display: none;
+    }
+    @media (max-width: 980px) {
+      width: calc(50% - 12px);
+    }
+    @media (max-width: 767px) {
+      width: 100%;
     }
   }
 }
@@ -2095,6 +2125,7 @@
       align-items: center;
       justify-content: space-between;
       gap: 8px;
+      margin-top: auto;
       padding-bottom: 16px;
       border-bottom: 1px solid var(--main, $main);
     }
@@ -2242,11 +2273,6 @@
   &-page {
     &__map {
       height: 600px;
-      img {
-        height: 100%;
-        width: 100%;
-        object-fit: cover;
-      }
       iframe {
         height: 100%;
         width: 100%;
@@ -2419,12 +2445,7 @@
     }
   }
   &__map {
-    height: 802px;
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
+    height: 600px;
     iframe {
       height: 100%;
       width: 100%;

@@ -139,36 +139,45 @@
   &__burger {
     position: relative;
     display: none;
-    width: 30px;
-    height: 20px;
+    width: 44px;
+    height: 44px;
+    padding: 16px 12px;
+    background: var(--main, $main);
     cursor: pointer;
     @include transition;
     span {
       position: absolute;
-      right: 0;
+      left: 50%;
+      transform: translateX(-50%);
       display: block;
       height: 2px;
-      width: 100%;
+      width: calc(100% - 24px);
       pointer-events: none;
-      background-color: $main;
+      background-color: var(--white, #FFFFFF);
       @include transition;
       &:nth-child(1){
-        top: 0;
+        top: 14px;
       }
       &:nth-child(2){
         top: 50%;
-        transform: translateY(-50%);
-        width: 75%;
+        transform: translateX(-50%) translateY(-50%);
       }
       &:nth-child(3){
-        bottom: 0;
-        width: 50%;
+        bottom: 14px;
       }
     }
-    &:hover {
+    &.active {
       span {
-        &:nth-child(2), &:nth-child(3){
-          width: 100%;
+        &:nth-child(1) {
+          left: 45%;
+          transform: rotate(-43deg) translateX(-55%);
+        }
+        &:nth-child(2) {
+          display: none;
+        }
+        &:nth-child(3) {
+          left: 45%;
+          transform: rotate(43deg) translateX(-55%);
         }
       }
     }

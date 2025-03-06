@@ -94,6 +94,10 @@ export function swiperInit() {
       modifier: 2,
       slideShadows: true
     },
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
     pagination: {
       el: ".photo-pagination",
       clickable: true,
@@ -123,6 +127,10 @@ export function swiperInit() {
       depth: 100,
       modifier: 2,
       slideShadows: true
+    },
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
     },
     pagination: {
       el: ".video-pagination",

@@ -3,6 +3,7 @@ import { swiperInit } from './swiperInit.js';
 import { animateGsap } from './animateGsap.js';
 import { filterMember } from './filter.js';
 import { tabsInit } from './tabs.js';
+import { ShowHidden } from './show.js';
 
 let scroll = window.scrollY;
 let header = document.querySelector('.header');
@@ -18,6 +19,7 @@ window.addEventListener("load", function () {
   animateGsap();
   filterMember();
   tabsInit();
+  ShowHidden();
 
   Fancybox.bind("[data-fancybox]", {
     // Your custom options
