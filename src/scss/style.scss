@@ -596,6 +596,7 @@
     text-transform: uppercase;
     writing-mode: sideways-lr;
     animation: bounce 1s infinite;
+    pointer-events: none;
   }
   .swiper-slide {
     opacity: 0 !important;
@@ -611,15 +612,17 @@
     opacity: 1 !important;
     .hero__title {
       span {
-        animation: moveUp 0.4s linear forwards;
+        animation: moveUp 0.5s linear forwards;
       }
     }
     .hero__button {
       animation: moveUp 0.5s linear forwards;
+      animation-delay: 0.3s;
     }
     .hero__desc {
       p {
-        animation: moveUp 0.6s linear forwards;
+        animation: moveUp 0.5s linear forwards;
+        animation-delay: 0.6s;
       }
     }
     .hero__img {
@@ -628,8 +631,10 @@
     }
     .hero__card {
       animation: moveLeft 1s ease-in-out forwards;
+      animation-delay: 0.3s;
       @media (max-width: 767px) {
         animation: moveUp 1s ease-in-out forwards;
+        animation-delay: 0.3s;
       }
     }
   }
@@ -2565,6 +2570,18 @@
 @keyframes moveLeft {
   0% {
     transform: translateX(200px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes moveRight {
+  0% {
+    transform: translateX(-100px);
     opacity: 0;
   }
 
