@@ -42,6 +42,11 @@ export function swiperInit() {
   var leadSwiper = new Swiper(".leadSwiper", {
     slidesPerView: "auto",
     spaceBetween: 18,
+    loop: true,
+    autoplay: {
+      delay: 3500,
+      disableOnInteraction: false,
+    },
     navigation: {
       nextEl: ".about-lead__next",
       prevEl: ".about-lead__prev",
