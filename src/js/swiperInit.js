@@ -20,7 +20,7 @@ export function swiperInit() {
     slidesPerView: 1,
     spaceBetween: 10,
     autoplay: {
-      delay: 2500,
+      delay: 3000,
       disableOnInteraction: false,
     },
     pagination: {
