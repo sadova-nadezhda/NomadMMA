@@ -174,8 +174,6 @@
       object-position: 50% 100%;
       z-index: 1;
       pointer-events: none;
-      opacity: 0;
-      animation: opacity 1s ease-in-out forwards;
       @media (max-width: 767px) {
         right: unset;
         left: 50%;
@@ -256,7 +254,7 @@
       display: flex;
       flex-direction: column;
       gap: 24px;
-      font-family: Benzin;
+      font-family: Bounded;
       font-weight: 700;
       line-height: 1;
       z-index: 2;
@@ -361,7 +359,7 @@
     &__title {
       margin-bottom: 36px;
       color: var(--main, $main);
-      font-family: Benzin;
+      font-family: Bounded;
       font-size: 240px;
       font-weight: 700;
       line-height: 1;
@@ -470,7 +468,7 @@
   &__title {
     max-width: 860px;
     min-height: 160px;
-    line-height: 1.4em;
+    line-height: 1.3em;
     // overflow: hidden;
     span {
       display: block;
@@ -593,7 +591,7 @@
     gap: 6px;
     color: var(--main, $main);
     font-size: 12px;
-    font-family: Benzin;
+    font-family: Bounded;
     font-weight: 500;
     text-transform: uppercase;
     writing-mode: sideways-lr;
@@ -649,7 +647,7 @@
     padding-left: 30px;
     color: var(--white, $white);
     background-color: transparent;
-    font-family: Benzin;
+    font-family: Bounded;
     font-weight: 600;
     opacity: 1;
     transition: color 0.3s ease-out, transform 0.3s ease-out;
@@ -715,7 +713,7 @@
   &__caption {
     margin-bottom: 24px;
     font-weight: 600;
-    line-height: 1.4em;
+    line-height: 1.3em;
     @media (max-width: 767px) {
       font-size: 14px;
     }
@@ -778,7 +776,7 @@
     }
     &__num {
       margin-bottom: 24px;
-      font-family: Benzin;
+      font-family: Bounded;
       font-weight: 600;
       font-size: 46px;
       line-height: 1;
@@ -811,8 +809,12 @@
     }
     &__img {
       height: 82.3%;
+      opacity: 0;
+      animation: imgAnim1 1s ease-in-out forwards;
       &_red {
         transform: translate(-100px, -40px) scale(1.1);
+        animation: imgAnimLeft 1s ease-in-out forwards;
+        animation-delay: 1s;
         @media (max-width: 767px) {
           transform: translate(calc(-50% - 50px), -10px);
         }
@@ -839,7 +841,7 @@
     }
     &__title {
       max-width: 300px;
-      line-height: 1.4em;
+      line-height: 1.3em;
     }
     &__caption {
       margin-bottom: 0;
@@ -1018,6 +1020,9 @@
   &-target {
     &__container {
       gap: 18px;
+    }
+    &__title {
+      line-height: 1.3em;
     }
     &__col {
       &_left {
@@ -1262,7 +1267,17 @@
       }
     }
   }
+  &-plan {
+    &__title {
+      max-width: 435px;
+      line-height: 1.3em;
+    }
+  }
   &-past {
+    &__title {
+      max-width: 435px;
+      line-height: 1.3em;
+    }
     &__button {
       cursor: pointer;
       &.btn-hide {
@@ -1296,7 +1311,7 @@
       color: var(--white, $white);
       background-color: var(--main, $main);
       text-transform: uppercase;
-      font-family: Benzin;
+      font-family: Bounded;
       font-weight: 600;
     }
     td {
@@ -1500,7 +1515,7 @@
     
       span {
         display: inline-block;
-        font-family: Benzin;
+        font-family: Bounded;
         font-size: 150px;
         font-weight: 500;
       }
@@ -1894,7 +1909,7 @@
     .tab {
       display: block;
       color: rgba(255, 255, 255, 0.70);
-      font-family: Benzin;
+      font-family: Bounded;
       font-weight: 500;
       font-size: 20px;
       line-height: 1;
@@ -2033,7 +2048,7 @@
   &__title {
     @media (max-width: 767px) {
       h1 {
-        line-height: 1.4em;
+        line-height: 1.3em;
       }
     }
   }
@@ -2103,7 +2118,7 @@
       padding: 20px 52px;
       color: rgba(12, 12, 12, 0.70);
       background-color: rgba(255, 255, 255, 0.70);
-      font-family: Benzin;
+      font-family: Bounded;
       font-weight: 500;
       font-size: 14px;
       line-height: 1;
@@ -2288,7 +2303,7 @@
       display: flex;
       flex-direction: column;
       gap: 24px;
-      font-family: Benzin;
+      font-family: Bounded;
       font-weight: 700;
       line-height: 1;
       z-index: 2;
@@ -2531,12 +2546,66 @@
   }
 }
 
-@keyframes opacity {
+@keyframes imgAnim1 {
   0% {
+    transform: scale(0.8) translateY(100px);
     opacity: 0;
   }
 
   100% {
+    transform: scale(1) translateY(0);
     opacity: 1;
+  }
+}
+
+@keyframes imgAnimLeft {
+  0% {
+    transform: scale(1) translateY(50px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translate(-100px, -40px) scale(1.1);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 767px) {
+  @keyframes imgAnimLeft {
+    0% {
+      transform: scale(1) translateY(50px);
+      opacity: 0;
+    }
+  
+    100% {
+      transform: translate(calc(-50% - 50px), -10px);
+      opacity: 1;
+    }
+  }
+}
+
+@keyframes imgAnimRight {
+  0% {
+    transform: scale(1) translateY(50px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translate(60px, -30px) scale(1.1);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 767px) {
+  @keyframes imgAnimRight {
+    0% {
+      transform: scale(1) translateY(50px);
+      opacity: 0;
+    }
+  
+    100% {
+      transform: translate(calc(-50% + 20px), -10px) scale(1.05);
+      opacity: 1;
+    }
   }
 }
